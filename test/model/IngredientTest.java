@@ -24,7 +24,9 @@ public class IngredientTest {
     public void addNegativeWeightTest() {
         setupStage1();
 
-        assertThrows(InvalidNumberException.class, () -> ingredient.addWeight(-100));
+        assertThrows(InvalidNumberException.class, () -> {
+            ingredient.addWeight(-100);
+        });
         assertEquals(245, ingredient.getWeight());
     }
 
@@ -41,7 +43,9 @@ public class IngredientTest {
     public void removeNegativeWeightTest() {
         setupStage1();
 
-        assertThrows(InvalidNumberException.class, () -> ingredient.addWeight(-100));
+        assertThrows(InvalidNumberException.class, ()->{
+            ingredient.removeWeight(-100);
+        });
         assertEquals(245, ingredient.getWeight());
     }
 }

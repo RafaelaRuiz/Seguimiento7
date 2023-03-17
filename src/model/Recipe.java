@@ -1,7 +1,7 @@
 package model;
 import java.util.*;
 
-import exceptions.DuplicatedIngredientException;
+import exceptions.*;
 public class Recipe {
     private ArrayList<Ingredient> ingredients;  
     public Recipe(){
