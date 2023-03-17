@@ -18,7 +18,7 @@ public class RecipeTest{
     }
 
     @Test
-    public void addUniqueIngredientTest() {
+    public void addOneIngredientTest() {
         setupStage1();
 
         recipe.addIngredient("Sal", 12);
@@ -33,7 +33,8 @@ public class RecipeTest{
 
         recipe.addIngredient("Pimienta", 6);
 
-        assertEquals();
+        assertEquals(recipe.getLast().getName(), "Pimienta");
+        assertEquals(recipe.getLast().getWeight(), 6);
     }
 
     @Test
@@ -43,7 +44,7 @@ public class RecipeTest{
         recipe.addIngredient("Ajo", 21);
 
         assertTrue(recipe.contains("Ajo"));
-        assertEquals(79,recipe.weightCompare("Ajo"));
+        assertEquals(79, recipe.weightCompare("Ajo"));
     }
 
     @Test

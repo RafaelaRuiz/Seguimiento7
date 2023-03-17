@@ -48,4 +48,7 @@ public class Recipe {
         }
         return 0;
     }
+    public Ingredient getLast(){
+        return ingredients.get(ingredients.size()-1);
+    }
 }
